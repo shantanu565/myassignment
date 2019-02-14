@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bug report Page</title>
+
+   <style type="text/css">
+
+#logo{
+  font-size: 30px;
+    line-height: 40px;
+    color: #00b35a;
+
+}
+
+
+a {
+    color: #00b35a;
+    text-decoration: none;
+}
+
+#myul{
+ color: #00b35a;
+}
+
+#fh{
+  margin:0 auto;
+  width:540px;
+   background-color: #808080;
+   text-align:left;
+    font-family: "SIMPSON";
+  height:60px;
+   align-items: center;
+  color:#ffffff;
+  padding:10px;
+  border: 0.5px solid #b2b2b2;
+}
+
+#ffotter{
+   margin:0 auto;
+  width:560px;
+  background-color: #d3d3d3;
+  height: 60px;
+   border: 0.5px solid #b2b2b2;
+ }
+#myfooter{
+  height: 60px;
+   border: 0.5px solid #b2b2b2;
+}
+
+
+.dropc{
+ background-color: #00b35a;
+ width: 100%;
+ height:50px
+ color:#ffffff;
+
+}
+
+ h1 {
+    color : #000000;
+    text-align : center;
+    font-family: "SIMPSON";
+}
+form {
+    width: 560px;
+    margin: 0 auto;
+}
+
+.forw{
+  width: 100%;
+}
+
+div * {
+  display: inline;
+}
+#rb{
+ display: inline;
+ 
+}
+
+#myul{
+ color:#00b35a;
+}
+
+#mysub{
+ background-color: #00b35a;
+ color:#ffffff;
+ height: 45px;
+ width: 90px;
+ float: right;
+ padding:5px;
+ margin-top: 5px;
+ margin-right: 5px;
+}
+
+#submit{
+ background-color: #00b35a;
+ color:#ffffff;
+ height: 20px;
+ width: 30px;
+}
+
+#secrb{
+ float: right;
+ margin-right:90px;
+}
+#firrb{
+ margin-left:30px;
+}
+
+</style>
+</head>
+
+<body>
+<div id="div1" align="left">
+<header id="ph">
+  <a  id="logo"><b>To The New</b></a></div>
+<div id="div2" align="right">
+  <nav>
+   <ul id="myul">
+    <li><a><b>Home</b></a></li>
+    <li><a><b>Quick Help</b></a></li>
+   </ul>
+  </nav> 
+ </header>
+</div>
+<hr>
+
+
+
+<header form="myform" id="fh">
+  <h2>Bug Report</h2>
+ </header>
+
+
+
+<form  id="myform" id="ff">
+ <fieldset>
+  Title:*<br>
+  <input type="text" name="title" value="title" class="forw" required>
+  <br><br>
+
+  Description:*<br>
+   <textarea name="description" rows="5" cols="30" class="forw" required></textarea>
+  <br><br>
+
+  Operating System:*<br>
+   <select name="os" class="dropc">
+  <option value="windows">Windows Xp</option>
+  <option value="macos">MacOS</option>
+  <option value="Unix">Unix</option>
+  <option value="linux">Linux</option>
+</select> <br><br>
+
+  Product:*<br>
+   <select name="product" class="dropc" required>
+  <option value="formoid">Formoid</option>
+  <option value="safari">Safari</option>
+  <option value="GNU image">Gnu image</option>
+</select> <br><br>
+ 
+  Version:*<br>
+  <input type="text" name="version" value="version" required>
+  <br><br>
+ 
+  Licence:<br>
+<div id="myrb">
+   <div id="firrb"><input type="radio" name="licence" value="free"> Free</div>
+  <div id="secrb"><input type="radio" name="licence" value="business">Business</div>
+  </div><br>
+
+  Severity:<br>
+  <select name="severity" class="dropc">
+  <option value="critical">Critical</option>
+  <option value="medium">medium</option>
+</select> <br><br>
+
+  Attachments:<input type="file" name="myFile" class="forw"><br>
+ 
+ </fieldset> 
+</form>
+<footer form="myform" id="ffotter">
+<div><input type="submit" value="Submit" form ="myform"  id="mysub" float="right"></div>
+</footer>
+
+ 
+
+</body>
+</html>
+

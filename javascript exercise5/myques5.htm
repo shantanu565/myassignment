@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>employee list</title>
+</head>
+<body>
+<pre id="test"></pre>
+<script>
+ var employees=[
+ { name:'kumar',age:19,salary:3000,DOB:'12-12-1999'},
+ { name:'Shri',age:21,salary:4000,DOB:'24-10-1997'},
+ { name:'Lily',age:21,salary:900,DOB:'15-03-1997'},
+ { name:'somesh',age:24,salary:15000,DOB:'22-04-1996'}
+ ];
+ employees.forEach(
+ function(e){
+ document.write(JSON.stringify(e)+"<br>");
+});
+
+ document.write("<br> Employees whose salary is bigger than 5000");
+ i=0;
+ employees.forEach(
+ function(e){
+ if(e.salary>=5000){
+ i++;
+ document.write("<br>"+e.name+"-"+e.salary+"<br>");
+}
+
+});
+
+ document.write("<br> fetch employees with salary less than 1000 and age greater than 20. Then give them an increment 5 times their salary");
+ i=0;
+ employees.forEach(
+ function(e){
+ if(e.salary<1000 && e.age>20){
+ i++;
+ document.write("<br>"+e.name+"-"+e.salary+"<br>");
+}
+
+});
+
+document.write("<br> Increment it by 5 times");
+ i=0;
+ employees.forEach(
+ function(e){
+ if(e.salary<1000 && e.age>20){
+ i++;
+ e.salary*=5;
+ document.write("<br>"+e.name+"-"+e.salary+"<br>");
+}
+
+});
+
+ document.write("<br> Group employee by age:");
+
+ Array.prototype.groupBy = function(prop) {
+	  return this.reduce(function(groups, item) {
+		const val = item[prop]
+		groups[val] = groups[val] || []
+		groups[val].push(item)
+		return groups
+	  }, {})
+	};
+  
+ 
+  const groupByMake = employees.groupBy('age');
+ document.write("<br> Group employee by age:"+groupByMake);
+    
+
+ </script>
+
+</body>
+</html>

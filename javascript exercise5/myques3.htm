@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+ function areaCircle(radius){
+ var radius = Number(document.getElementById('radius').value);
+  var areaCircle = Math.PI * radius * radius;
+  document.getElementById('results').value = areaCircle.toFixed(3);
+ }
+ </script>
+</head>
+<body>
+<div>
+ <h2> Area of Circle: </h2><br>
+ Enter the Radius: <input type="text" value="0" id="radius"><br><br>
+ <button onClick ="areaCircle()">Calculate area</button><br><br><br>
+ Results: <input type="text" value="0" id="results">
+</div>
+
+</body>
+</html>

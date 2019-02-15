@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+ function checkpel(){
+ var a = document.getElementById('mystring').value;
+ var s='';
+ var i='';
+ var j=a.length;
+ for(i=j-1;i>=0;i--){
+ s+=a.charAt(i);
+}
+if(s==a){
+document.getElementById('results').value="it is a palindrome";
+}else{
+document.getElementById('results').value="it is not palindrome";
+}
+ }
+ </script>
+</head>
+<body>
+<div>
+ <h2>Palindrom question </h2><br>
+ Enter the String: <input type="text" value="0" id="mystring"><br><br>
+ <button onClick ="checkpel()">Check</button><br><br><br>
+ Results: <input type="text" value="0" id="results">
+</div>
+
+</body>
+</html>

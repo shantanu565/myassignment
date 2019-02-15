@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#getdata").click(function(){
+                    $.ajax({url: "https://api.myjson.com/bins/mhh92", success: function(result){
+                        $("#tah").append("<th> Name </th> <th> Age </th>")
+                        $("#data").attr({"border":"1", "cellpadding":"5px"})
+                        putJsonInTable(result);
+                    }});
+                })
+            })
+            var putJsonInTable = function(data){
+                data.forEach(function (item) {
+                           $("#tab").append("<tr> <td>" + item.name + "</td> <td>" + item.age + "</td></tr>")
+                });
+            }
+
+              // my json file
+            //[{"name":"kumar","age":20},{"name":"Shri","age":35},{"name":"Polo","age":30},{"name":"rohan","age":40},{"name":"Kriti","age":30}];
+        
+           </script>
+     
+    </head>
+           
+
+
+    <body>
+        <div id="fid">
+            <button id="getdata">Get Data</button><br><br>
+            <div id="container">
+            </div>
+            <div>
+                <table id="data" style="border-collapse: collapse;">
+                    <thead id="tah">
+
+                    </thead>
+                    <tbody id="tab">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</body>
+
+
+</html>
+

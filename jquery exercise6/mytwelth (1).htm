@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+ $(document).ready(function() {
+      $("#childid").click(function(){
+      $("$fid").off("click");
+      $("$tid").append("<br><h3>child click</h3>");
+});
+
+});
+</script>
+</head>
+<body>
+<div id="fid" style="width:360px;height:260px;background-color:red">
+<div id="childid" style="width:150px;height:150px;background-color:green"></div>
+</div>
+
+ <div id="tid">here:
+</div>
+
+</body>
+</html>
+
